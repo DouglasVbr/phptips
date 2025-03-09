@@ -31,7 +31,7 @@
 //    ]
 //];
 
-
+define("URL_BASE", "http://localhost/phptips/ep01");
 
 //HOSTS SMTP
 define("MAIL_A",[

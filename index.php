@@ -11,7 +11,10 @@ $email->add(
     body: "<h1>Estou apenas testando! </h1> Espero que tenha dado certo!",
     recipient_name: "Douglas Vieira",
     recipient_email: "douglascanal1998@gmail.com"
-)->send();
+)->send(
+   from_name: "Douglas Vieira",
+   from_email: "douglascanal1998@gmail.com"
+);
 
 if(!$email->error()){
     var_dump(true);

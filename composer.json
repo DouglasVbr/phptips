@@ -1,0 +1,27 @@
+{
+  "name": "douglasvbr/phptips001",
+  "description": "CONHECENDO O COMPOSER E CONFIGURANDO IDE | PHP TIPS #001",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Douglas Vieira",
+      "email": "douglascanal1998@gmail.com",
+      "role": "Desenvolvedor"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "Source/"
+    },
+    "files": [
+      "Source/Config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/datalayer": "6.0.7"
+  }
+}

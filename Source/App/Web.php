@@ -1,11 +1,23 @@
 <?php
 
+
 namespace Source\App;
+
+use League\Plates\Engine;
+use source\Models\User;
 
 class Web
 {
-public function home($data)
+private $view;
+    public function __construct()
+    {
+      $this->view = Engine::create(base_dlr: __DIR__."/../../theme", ext:"php");
+    }
+
+    public function home(): void
 {
+    $users = (new User())->find()->fetch(all:true);
+    echo $this->view->render(templete_name: "home",[ "title"=> "Home | " .SITE, "users"=>$users]);
     echo "<h1>Web Home</h1>";
     var_dump($data);
 }
@@ -31,9 +43,11 @@ public function home($data)
     }
 
 
-public function contact($data)
+public function contact(): void
  {
-echo "<h1>Web Contato</h1>";
+echo $this->view->render(template_name: "contact",[
+   "title"=>"Contato | " . SITE
+]);
 var_dump($data);
 
 $url = URL_BASE;
@@ -41,8 +55,13 @@ require __DIR__ ."/../../views/contact.php";
 
  }
 
-    public function error($data)
+    public function error(array $data): void
     {
+        echo $this->view->render(template_name:"error",[
+            "title"=>"Error{$data['errcode']} |" . SITE,
+            "error"=> $data["errcode"]
+
+            ]);
         echo "<h1>Web Erro{$data["errcode"]}</h1>";
         var_dump($data);
     }

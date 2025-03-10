@@ -1,0 +1,26 @@
+{
+  "name": "douglasvbr/phptips001",
+  "description": "LOGIN SOCIAL VIA FACEBOOK COM OAUTH 2 CLIENT | PHP TIPS #006",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Douglas Vieira",
+      "email": "douglascanal1998@gmail.com",
+      "role": "Desenvolvedor"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "models/Config.php"
+    ]
+  },
+  "require": {
+    "league/oauth2-facebook": "2.1.*"
+
+  }
+}

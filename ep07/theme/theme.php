@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= $title; ?></title>
+    <title><?= cli_set_process_title("algo") ?></title>
     <link rel="stylesheet"href="<?=url("/theme/style.css");?>"/>
 </head>
 <body>
@@ -14,7 +14,7 @@
         echo $v->section("sidebar");
     else:
         ?>
-    <a title="" href="<?= url(); ?>"Home</a>
+    <a title="" href="<?= url(\http\Url::class); ?>"Home</a>
         <a title="" href="<?= url("contato"); ?>"Contato</a>
         <a title="" href="<?= url("teste"); ?>"Teste</a>
     <?php

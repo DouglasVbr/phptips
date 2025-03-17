@@ -25,6 +25,11 @@ $route->dispatch();
 if($route->error()) {
     $route->redrect(route:"/ops{$route->error()}");
 
+}else{
+    $route->call($route->handler());
+
 }
+
+
 
 

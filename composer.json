@@ -1,6 +1,6 @@
 {
   "name": "douglasvbr/phptips001",
-  "description": "CONHECENDO O COMPOSER E CONFIGURANDO IDE | PHP TIPS #001",
+  "description": "",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -11,8 +11,11 @@
     }
   ],
   "config": {
-    "vendor-dir": "vendor"
+    "vendor-dir": "vendor/"
   },
+
+
+
   "autoload": {
     "psr-4": {
       "Source\\": "Source/"
@@ -22,6 +25,6 @@
     ]
   },
   "require": {
-    "coffeecode/datalayer": "6.0.7"
+    "league/oauth2-facebook": "2.2.*"
   }
 }

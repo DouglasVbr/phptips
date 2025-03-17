@@ -18,6 +18,17 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/ep6/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/ep6/vendor/composer" />
+      <path value="$PROJECT_DIR$/ep6/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/ep6/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/ep6/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/ep6/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/ep6/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/ep6/vendor/league/oauth2-facebook" />
+      <path value="$PROJECT_DIR$/ep6/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/ep6/vendor/league/oauth2-client" />
+      <path value="$PROJECT_DIR$/ep6/vendor/guzzlehttp/psr7" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

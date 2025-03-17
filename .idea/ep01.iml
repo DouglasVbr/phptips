@@ -3,6 +3,19 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Source" isTestSource="false" packagePrefix="Source\" />
+      <sourceFolder url="file://$MODULE_DIR$/ep07/source" isTestSource="false" packagePrefix="Source\" />
+      <sourceFolder url="file://$MODULE_DIR$/ep6/source" isTestSource="false" packagePrefix="Source\" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/league/oauth2-client" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/league/oauth2-facebook" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/ep6/vendor/symfony/deprecation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />

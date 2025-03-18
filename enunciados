@@ -1,0 +1,105 @@
+1 - Sua missão é desenvolver um programa para tornar a musica dos 5 patinhos mais dinamica a ponto de podemos definir a quantidade total de patinhos e o programa imprimir sua letra completa em sequencia
+
+o programa deve seguir as seguintes restrições abaixo:
+- o programa deve solicitar ao usuario que insira a quantidade total de patinhos
+- o programa deve solicitar ao usuario a quantidade total de patinhos
+- o numero de patinhos deve ser maior do que 1 e menor que 10
+- o programa deve iterar a quantidade  total de patinhos fazendo as atualizações
+necessárias nos textos
+- as estofes devem ser separadas por duas quebras de linhas
+
+ //Cinco patinhos foram passear
+ //Além das montanhas para brincar
+ //A mamãe gritou: Quá, quá, quá, quá
+ //Mas só quatro patinhos voltaram de lá
+ //Quatro patinhos foram passear
+ //Além das montanhas para brincar
+ //A mamãe gritou: Quá, quá, quá, quá
+ //Mas só três patinhos voltaram de lá
+ //Três patinhos foram passear
+ //Além das montanhas para brincar
+ //A mamãe gritou: Quá, quá, quá, quá
+ //Mas só dois patinhos voltaram de lá
+ //Dois patinhos foram passear
+ //Além das montanhas para brincar
+ //A mamãe gritou: Quá, quá, quá, quá
+ //Mas só um patinho voltou de lá
+ //Um patinho foi passear
+ //Além das montanhas para brincar
+ //A mamãe gritou: Quá, quá, quá, quá
+ //Mas nenhum patinho voltou de lá
+ //Poxa, a mamãe patinha ficou tão triste naquele dia
+ //Aonde será que estavam os seus filhotinhos?
+ //Mas essa história vai ter um final feliz
+ //Sabe por quê?
+ //A mamãe patinha foi procurar
+ //Além das montanhas, na beira do mar
+ //A mamãe gritou: Quá, quá, quá, quá!
+ //E os cinco patinhos voltaram de lá
+
+
+2- Voce foi contratado para desenvolver um conversor de unidades,
+onde o usuario podera inserir valores em milimetros, centimetros, metros ou quilometros e a aplicação
+devera trazer a informação do valor correspondente nas demais unidades.
+
+o programa deve seguir as restrições abaixo:
+- o programa deve solicitar  ao usuario que informe qual a unidade base do valor a ser inserido
+- o programa não deve permitir o avanço das etapas caso o usuario digite uma unidade invalida
+- o programa deve solicitar ao usuario o valor da unidade base
+- o  programa não deve permitir o avanço  das etapas caso o usuario  digite um valor não numerico
+- o programa devera imprimir os valores correspondentes em todas as unidades disponiveis no sistema,
+ exceto aquela que o usuario inseriu
+
+
+ 3 - voce foi contratado para desenvolver um programa para gerenciar sorteios de nomes,  onde
+ o usuario podera inserir vários nomes em uma lista e solicitar o  sorteio de 1 desses nomes .
+
+ o programa deve seguir as restrições abaixo:
+ - o programa deverá ter um menu para que o usuario escolha se deve adicionar, listar, sortear ou sair
+ - A opção listar só poderá ser exibida caso a lista contenha ao menos um nome
+ - o programa devera sortear apenas um nome por vez e deve remover os nomes já sorteados da lista
+
+
+ 4 - voce foi contratado para desenvolver um programa para auxiliar
+ no saque de caixas eletronicos. esse programa deverá calcular a
+ quantidade de cada cedula de dinheiro que o caixa devera entregar ao cliente
+
+ o  programa deve seguir as restrições a baixo:
+  - o programa deve permitir saques com cédulas de R$ 5,00, R$ 10,00, R$ 20,00, R$ 50,00, R$ 100,00;
+  - o programa deve informar ao cliente o valor do saque ;
+  - o programa deve priorizar as cédulas maiores durante o saque;
+  - o programa deve impedir o saque, caso o valor solicitado não
+  possa ser atendido com as cédulas disponiveis;
+  - o programa deve mostrar ao cliente a quantidade de cédulas que
+  serão entregues para ele ao final da execução;
+
+
+
+
+5 - voce foi contratado para desenvolver um gerador
+ de senhas em php onde o usuario podera configurar o
+  tamanho da senha e quais caracteres deseja adicionar
+
+  o programa deve seguir as seguintes restrições :
+  - o programa deve permitir que o usuario informe o tamanho desejado
+  para a senha mas deve ter um limite entre 6 e 60 caracteres.
+  - o programa deve permitir que o usuario defina se deseja  ter
+   letras minusculas, letras maiusculas caracteres numericos e
+    caracteres especiais - o programa deve impedir a geração de
+     senhas caso nenhum tipo de caracteres for definido
+
+
+     6- voce foi contratado para desenvolver uma calculadora para
+      linha de comando onde o usuario devera digitar a expressão mátematica
+       simples que deseja calcular e o programa devera execulta-la e retornar
+        o resultado para o usuario o programa deve seguir as restrições abaixo:
+     - o programa deve permitir que o usuario  insira uma expressão mátematica simples;
+     - o programa deve verificar o conteudo da expressão e permitir que apenas caracteres
+      numéricos e operadores mátematicos, espaços e parenteses possam ser enviados .
+     - o programa deve imprimir uma mensagem de erro caso a expressão não seja válida .
+     - o programa deve execultar a expressão matematica e imprimir o resultado para o usuario
+     - o programa deve imprimir uma mensagem de erro caso o resultado não seja numérico.
+
+
+     extras : Escreva um script que pede o raio de um círculo, e em seguida exiba o perímetro e área do círculo.
+     Para saber o valor do pi, use: M_PI (ele armazena o valor de pi)

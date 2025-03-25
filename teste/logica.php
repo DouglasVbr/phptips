@@ -758,25 +758,70 @@ switch ($numVersao) {
         echo " o numero e igual a zero \n";
 
 }
-
 //2) Crie um algoritmo que solicite a entrada
 // de um número, e exiba a tabuada de 0 a 10
 // de acordo com o número solicitado, ex:
 //Entrada = 4
 //Saída = 4 X 0 = 0...4 X 10 = 40.
 
-//$numTabuada = readline("\n Digite o numero: \n");
-
-//for ($i = 0; $i <= 10; $i++);
-
-
-
-//}
+$numTabuada = readline("\n Digite o numero: \n");
+// Loop para iterar de 1 a 10 para cada multiplicador
+for ( $j = 0; $j <= 10; $j++) {
+    echo ("\n $numTabuada X $j = " . ($numTabuada * $j ."\n") );
+}
 
 // 3) Crie um algoritmo que solicite um número,
 // e faça o cálculo fatorial do mesmo,
 // exiba o resultado na tela. Ex: Entrada = 3
 // Processamento: (3 * 2) * 1 Saída: 6
+$numFatorial = readline("\n Digite o numero : \n");
+$fatorial = 1;
+for ($i = $numFatorial; $i > 1; $i--) {
+    $fatorial = $fatorial * $i;
+}
+echo " o fatorial de " . $numFatorial . " e igual a " . $fatorial . " \n";
+
+
+
+// tabuada do 1 até o 10
+
+// Loop para iterar de 1 a 10
+for ( $i = 1; $i <= 10; $i++) {
+    // Loop para iterar de 1 a 10 para cada multiplicador
+    for ( $j = 1; $j <= 10; $j++) {
+        echo ("\n" . $i . " x " . $j . " = " . ($i * $j) . "\n");
+
+
+    }
+}
+
+// voce foi contratado para desenvolver um software
+// com as seguintes informações:
+// que peça ao usuario o nome, sobre nome,  idade, sexo, data de nacimento,
+// signo,  a cada input lido o softhare vai implementando  cada passo
+// e se for de tal signo,  de um numero da sorte aleatorio e uma cor aleatoria tambem,
+// e mostre ao final uma mensagem de boas vindas
+// informando todos os dados sobre o usuario com o oroscopo do dia de acordo com o signo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

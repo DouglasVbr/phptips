@@ -21,7 +21,7 @@ while ($contagem >= 0) {
     echo $contagem . "\n";
     $contagem--;
 }
-define ('DELAY_SECONDS', 1); // definindo delay de 2 segundos
+define('DELAY_SECONDS', 1); // definindo delay de 2 segundos
 
 // Crie um programa de contagem progressiva.
 // Peça um número e conte de 0 até esse número,
@@ -42,10 +42,9 @@ $pergunta = readline("\n Digite a sua idade: \n");
 // se idade é maior que 18 e possui carteira
 if ($pergunta >= 18 && $possui_Carteira) {
     echo "pode Dirigir";
-}else{
+} else {
     echo "nao pode Dirigir\n\n";
 }
-
 
 
 $tem_maca = false;
@@ -55,10 +54,9 @@ $tem_fruta = readline("\n Digite se tem fruta: \n");
 // se tem maça ou tem banana
 if ($tem_fruta === "sim") {
     echo "\nvoce tem fruta \n";
-}else{
+} else {
     echo "\nvoce nao tem fruta\n";
 }
-
 
 
 // Jogo de adivinhar número aleatório até 100 com até 2 tentativas
@@ -67,7 +65,7 @@ $tentativa = 0; // Contador de tentativas
 $numero_digitado = null;
 
 while ($numero_digitado != $numero && $tentativa < 10) {
-    $numero_digitado = (int) readline("\nDigite um número de 1 até 100: \n");
+    $numero_digitado = (int)readline("\nDigite um número de 1 até 100: \n");
 
     // Valida se o número digitado está dentro do intervalo correto
     if ($numero_digitado < 1 || $numero_digitado > 100) {
@@ -118,25 +116,23 @@ echo "bem vindo $nome \n";
 // Qual a linguagem de programação que você mais gosta?.
 // Em seguida, armazene a resposta em uma variável e mostre no console do navegador.
 
-$linguagens = ["php", "javascript", "python", "java", "c#", "c++", "kotlyn", "ruby", "go.lang" ];
+$linguagens = ["php", "javascript", "python", "java", "c#", "c++", "kotlyn", "ruby", "go.lang"];
 $linguagens_disponiveis = implode(', ', $linguagens);
 do {
-$pergunta = readline("Qual a Linguagem de Programação que voce mais  gosta? ($linguagens_disponiveis)\n");
+    $pergunta = readline("Qual a Linguagem de Programação que voce mais  gosta? ($linguagens_disponiveis)\n");
 
-if (!in_array(strtolower($pergunta), array_map('strtolower', $linguagens))) {
-    echo"Por Favor, Escolha uma linguagem válida \n";
-
-
-} while (!in_array(strtolower($pergunta), array_map('strtolower', $linguagens)));
-
-echo "Voce escolheu $pergunta \n";
-break;
+    if (!in_array(strtolower($pergunta), array_map('strtolower', $linguagens))) {
+        echo "Por Favor, Escolha uma linguagem válida \n";
 
 
+    }
+    while (!in_array(strtolower($pergunta), array_map('strtolower', $linguagens))) ;
 
-}
-while (true);
+    echo "Voce escolheu $pergunta \n";
+    break;
 
+
+} while (true);
 
 
 // Crie uma variável chamada "valor1" e outra chamada
@@ -150,9 +146,7 @@ $valor1 = readline("\n Digite o valor1: \n");
 $valor2 = readline("\n Digite o valor2: \n");
 $resultado = $valor1 + $valor2;
 
-echo"A soma de $valor1 e $valor2 é igual a $resultado \n";
-
-
+echo "A soma de $valor1 e $valor2 é igual a $resultado \n";
 
 
 //Peça ao usuário para inserir sua idade com prompt.
@@ -163,9 +157,9 @@ echo"A soma de $valor1 e $valor2 é igual a $resultado \n";
 $idade = readline("\n Digite sua idade: \n");
 
 if ($idade >= 18) {
-    echo" maior de idade \n ";
-}else{
-    echo" menor de idade \n ";
+    echo " maior de idade \n ";
+} else {
+    echo " menor de idade \n ";
 }
 
 
@@ -182,7 +176,7 @@ if ($numero === 0) {
     echo " o numero e igual a zero \n";
 }
 
-echo"o numero e $numero \n";
+echo "o numero e $numero \n";
 
 //Use um loop while para imprimir os números de 1 a 10 no console.
 $contador = 1;
@@ -200,7 +194,7 @@ while ($contador <= 10) {
 $nota = readline("\n Digite a nota: \n");
 if ($nota >= 7) {
     echo "Aprovado \n";
-}else{
+} else {
     echo "Reprovado \n";
 }
 
@@ -220,6 +214,168 @@ echo "o numero gerado e $numero \n";
 
 $numero = rand(1, 1000);
 echo "o numero gerado e $numero \n";
+
+
+//criar um gerador array de  strings aleatório com as strings ja definidas
+
+echo readline("Digite o valor do animal entre 1 e 12 \n");
+
+$animais = [1 => "cachorro",
+    2 => "gato",
+    3 => "elefante",
+    4 => "pato",
+    5 => "coelho",
+    6 => "girafa",
+    7 => "morcego",
+    8 => "cavalo",
+    9 => "cobra",
+    10 => "hipopotamo",
+    11 => "doninha",
+    12 => "largato",];
+
+$indice = readline();
+
+
+echo $animais [$indice];
+
+//
+// função para exibir o menu
+function menu()
+{
+    echo "=============================== \n";
+    echo " Conversor Númerico \n";
+    echo "================================\n";
+    echo "Escolha uma opção: \n";
+    echo " 1. Converter de Decimal para outra Bases \n";
+    echo " 2. Converter de Binário para outra Base  \n";
+    echo " 3. Converter de Hexadecimal para outra Base \n";
+    echo " 4. Converter de Octal para outra Base \n";
+    echo " 0. Sair \n";
+    echo "=============================== \n";
+    echo "Digite Sua Opção:";
+}
+
+function converterNumero($numero, $base)
+{
+
+    //Converter o número para decimal como base inicial
+    if ($base === 'binario') {
+        $numero = bindec($numero);
+    }
+    if ($base === 'octal') {
+        $numero = octdec($numero);
+    }
+    if ($base === 'hexadecimal') {
+        $numero = hexdec($numero);
+    } else {
+        $decimal = $numero;
+
+    }
+
+    echo "=============================== \n";
+    echo "Conversão de $numero (base: $base): \n)";
+    echo "Decimal:" . $decimal . " \n";
+    echo "binário :" . decbin($decimal) . "\n";
+    echo "octal :" . decoct($decimal) . "\n";
+    echo "hexadecimal :" . dechex($decimal) . "\n";
+    echo "=============================== \n";
+
+}
+
+// loop principal do programa
+do {
+    exibirMenu();
+
+    // leitura da opção do usuario
+    $opcao = trim(fgets(STDIN));
+
+    switch ($opcao) {
+        case 1:
+            echo "Digite o número Decimal: \n";
+            $numero = trim(fgets(STDIN));
+            if (is_numeric($numero)) {
+                converterNumero($numero, 'decimal');
+            } else {
+                echo " Valor Invalido Insira um Número decimal \n ";
+            }
+            break;
+
+        case 2:
+            echo " Digite o Número Binário: \n";
+            $numero = trim(fgets(STDIN));
+            if (preg_match('/^[0-1]+$/', $numero)) {
+                converterNumero($numero, 'binario');
+            } else {
+                echo "Valor inválido! Insira um número binário válido (apenas 0s e 1s).\n";
+
+            }
+            break;
+
+        case 3:
+            echo "Digite o Número octal: \n";
+            $numero = trim(fgets(STDIN));
+            if (preg_match('/^[0-7]+$/', $numero)) {
+                converterNumero($numero, 'octal');
+            } else {
+                echo "Valor inválido! Insira um número octal válido (0-7).\n";
+
+            }
+            break;
+
+        case 4:
+            echo "Digite o Número hexadecimal: \n";
+            $numero = trim(fgets(STDIN));
+            if (preg_match('/^[0-9a-fA-F]+$/', $numero)) {
+                converterNumero($numero, 'hexadecimal');
+            } else {
+                echo "Valor inválido! Insira um número hexadecimal válido (0-9, A-F).\n";
+
+            }
+            break;
+
+        case 0:
+            echo "Saindo do programa... \n";
+            break;
+
+            default:
+                echo"Opção Inválida! Tente novamente. \n";
+
+    }
+
+}while($opcao != 0);
+
+// descubra a palavra
+function descubraPalavra(){
+    $palavra = ["helloword", "hello", "world", "hello world", "hello world!", "hello world!!", "hello world!!!"];
+
+    $count = count($palavra) -1;
+
+    $n = rand(0, $count);
+
+    return $palavra[$n];
+}
+
+echo descubraPalavra();
+
+// verificador de email lidos e não lidos
+
+// configurar a conecção Imap
+$host = "imap.gmail.com";
+$port = 993;
+$user = "<EMAIL>";
+$password = "<PASSWORD>";
+$mailbox = "INBOX";
+function verificadorEmail($email){
+
+
+
+}
+
+
+
+
+
+
 
 
 

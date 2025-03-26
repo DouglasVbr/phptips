@@ -357,19 +357,34 @@ function descubraPalavra(){
 
 echo descubraPalavra();
 
-// verificador de email lidos e não lidos
 
-// configurar a conecção Imap
-$host = "imap.gmail.com";
-$port = 993;
-$user = "<EMAIL>";
-$password = "<PASSWORD>";
-$mailbox = "INBOX";
-function verificadorEmail($email){
+$Email = [
+    "teste@outlook.com",
+    "teste123@gmail.com",
+    "teste321@test.com",
+    "teste@test.com",
+    "Teste@test.com",
+];
 
+function filtrarEmails(array $email): array{
+    $emailsValidos = [];
 
-
+    foreach ($email as $email) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) && checkdnsrr(explode('@', $email)[1], 'MX')) { // A função filter_var com FILTER_VALIDADE_EMAIL valida se o formato do E-mail
+            // é correto o checkdnsrr verifica se o dominio do email realmente existe
+            $emailsValidos[] = $email;
+        }
+    }
+    return $emailsValidos;
 }
+
+$emailsValidos = filtrarEmails($Email);
+
+echo "E-mail Válido!:\n";
+print_r($emailsValidos);
+
+echo "<p>Copyright &copy; 2025-" . date("Y") . "</p>";
+
 
 
 

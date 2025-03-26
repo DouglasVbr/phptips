@@ -1,0 +1,75 @@
+
+ fopen() -> é uma função para criar e ler arquivo
+ <?php
+ $myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+ echo fread($myfile,filesize("webdictionary.txt"));
+ fclose($myfile);
+ ?>
+
+ Dica: O fread() e o fclose() as funções serão explicado abaixo.
+
+ O arquivo pode ser aberto em um dos seguintes modos:
+
+Modos Descrição
+r Abre um arquivo somente para leitura. O ponteiro do arquivo começa no início do arquivo
+w Abre um arquivo somente para gravação. Apaga o conteúdo do arquivo ou cria um novo arquivo se ele não existir. O ponteiro do arquivo começa no início do arquivo
+a Abre um arquivo somente para gravação. Os dados existentes no arquivo são preservados. O ponteiro do arquivo começa no final do arquivo. Cria um novo arquivo se o arquivo não existir
+x Cria um novo arquivo somente para gravação. Retorna FALSE e um erro se o arquivo já existir
+r+ Abre um arquivo para leitura/gravação. O ponteiro do arquivo começa no início do arquivo
+w+ Abre um arquivo para leitura/gravação. Apaga o conteúdo do arquivo ou cria um novo arquivo se ele não existir. O ponteiro do arquivo começa no início do arquivo
+a+ Abre um arquivo para leitura/gravação. Os dados existentes no arquivo são preservados. O ponteiro do arquivo começa no final do arquivo. Cria um novo arquivo se o arquivo não existir
+x+ Cria um novo arquivo para leitura/gravação. Retorna FALSE e um erro se o arquivo já existir
+
+
+arquivo de Leitura PHP - fread()
+O fread() função lê a partir de um arquivo aberto.
+
+O primeiro parâmetro de fread() contém o nome do arquivo para ler e o segundo parâmetro especifica o número máximo de bytes a serem lidos.
+
+O seguinte código PHP lê o arquivo "webdictionary.txt" até o final:
+
+fread($myfile,filesize("webdictionary.txt"));
+PHP Fechar Arquivo - fclose()
+O fclose() função é usada para fechar um arquivo aberto.
+
+
+O fclose() requer o nome do arquivo (ou uma variável que contém o nome do arquivo) queremos fechar:
+
+<?php
+$myfile = fopen("webdictionary.txt", "r");
+// some code to be executed....
+fclose($myfile);
+?>
+PHP Read Single Line - fgets()
+O fgets() função é usada para ler uma única linha de um arquivo.
+
+O exemplo abaixo exibe a primeira linha do arquivo "webdictionary.txt":
+
+Exemplo
+<?php
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+echo fgets($myfile);
+fclose($myfile);
+?>
+
+
+Nota: Depois de uma chamada para o fgets() função, o ponteiro do arquivo foi movido para a próxima linha.
+
+PHP Check End-Of-File - feof()
+O feof() a função verifica se o "fim do arquivo" (EOF) foi alcançado.
+
+O feof() função é útil para looping através de dados de comprimento desconhecido.
+
+O exemplo abaixo lê o arquivo "webdictionary.txt" linha por linha, até que o fim do arquivo seja atingido:
+
+Exemplo
+<?php
+$myfile = fopen("webdictionary.txt", "r") or die("Unable to open file!");
+// Output one line until end-of-file
+while(!feof($myfile)) {
+  echo fgets($myfile) . "<br>";
+}
+fclose($myfile);
+?>
+
+O fwrite() função é usada para gravar em um arquivo.
